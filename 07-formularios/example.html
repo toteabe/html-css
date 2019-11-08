@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Fromularios</title>
+	</head>
+	<body>
+		<form action="http://www.example.com/review.php" method="get">
+			<fieldset>
+				<legend> Sus detalles: </legend>
+				<label> Nombre: <input type="text" name="name" size="30" maxlength="100"> </label> <br />
+				<label> Correo electrónico: <input type="email" name="email" size="30" maxlength="100"> </label> <br />
+			</fieldset> <br />
+			<fieldset>
+				<legend> Tu opinión: </legend>
+				<p>
+					<label for="hear-about"> ¿Cómo se enteró de nosotros? </label>
+					<select name="referrer" id="escuchar">
+						<option value="google"> Google </option>
+						<option value="friend"> Amigo </option>
+						<option value="advert"> Anuncio </option>
+						<option value="other"> Otro </option>
+					</select>
+				</p>
+				<p>
+					¿Volverías a visitarme? <br />
+					<label> <input type="radio" name="rating" value="yes" /> Sí </label>
+					<label> <input type="radio" name="rating" value="no" /> No </label>
+					<label> <input type="radio" name="rating" value="maybe" /> Quizás </label>
+				</p>
+				<p>
+					<label for="comments"> Comentarios: </label> <br />
+					<textarea rows="4" cols="40" id="comentarios"> </textarea>
+				</p>
+				<label> <input type="checkbox" name="subscribe" verified="marcado" /> Registrarme para recibir actualizaciones por
+					correo electrónico </label> <br />
+				<input type="submit" value="Enviar reseña" />
+			</fieldset>
+		</form>
+	</body>
+</html>
