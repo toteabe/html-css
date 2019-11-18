@@ -1,0 +1,18 @@
+ul {
+    /*Este estilo va a reemplazar la bala (bullet) la lista*/
+    /*Introduzco un direccionamiento a fichero imagen relativo al mismo directorio de la página*/
+    
+    
+    list-style-image: url('purple-bullet-round.png');
+    
+    list-style-position: inside;
+    
+
+    /*Elimina el estilo por defecto de la lista y también establece a 0 los márgenes y los padding.
+    /*
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   */
+
+   }
