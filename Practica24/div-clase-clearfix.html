@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!--Fila 1:-->
+    <!-- div con clase clearfix que obliga a introducir un salto de línea a continuación de los float left-->    
+    <div class="clearfix">
+        <!-- Las celdas de la fila se pintan de izquierda a derecha mediante float: left-->
+        <div style="float: left;height: 50px;width: 100px;background: yellow;"></div>
+        <div style="float: left;height: 100px;width: 200px;background: green;"></div>
+    </div>
+    <!--::after un pseudo-elemento css que fuerza salto de línea-->
+    <!--Fila 2:-->
+    <div class="clearfix">
+            <!-- Las celdas de la fila se pintan de izquierda a derecha mediante float: left-->
+        <div style="float: left;height: 80px;width: 350px;background: red;"></div>
+        <div style="float: left;height: 120px;width: 400px;background: blue;"></div>
+    </div>
+    <!--::after un pseudo-elemento css que fuerza salto de línea-->
+    <div style="width: 900px;">
+        <div style="float: left;height: 80px;width: 350px;background: red;"></div>
+        <!--La última celda a rellenar el resto de ancho que quede float: none; width: auto; overflow: hidden-->
+        <div style="float: none;width: auto; overflow:hidden;height: 80px;background: yellow;"></div>
+    </div>
+
+
+</body>
+</html>

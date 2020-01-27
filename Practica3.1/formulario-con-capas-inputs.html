@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        div {
+            margin: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Un formulario tiene 2 atributos principales: action 
+        url donde se envían los datos del formulario
+        y method="POST" como se envían normalmente como POST, no GET
+        POST quiere decir que los datos van en el cuerpo del mensaje http
+    -->
+    <form action="https://enug2xku6kkip.x.pipedream.net" method="GET">
+
+        <div id="contenedora-formulario" style="width: 700px;background: #BEBEBE;">
+
+            <!--Fila 1-->
+            <div class="clearfix"
+                style=" float: none;margin: 0 auto;width: 700px;text-align: center;background: white;">
+                -Formulario en capas-
+            </div>
+
+            <!--Fila 2-->
+            <div class="clearfix">
+
+
+                <!--Celda 1 de la fila 2-->
+                <div style="float:left;width: 80px;margin-right: 100px;">
+                    Nombre
+                </div>
+                <!--Celda 2 de la fila 2-->
+                <div style="float:left;">
+                    <input type="text" name="nombre" size="20" />
+                </div>
+                <div style="float: left">
+                    F. Nac
+                </div>
+                <div style="float:left">
+                    <input type="date" name="fecha" title="Pon fecha de nacimiento" />
+                </div>
+                <div style="float:left">
+                    <input type="text" placeholder="DNI" size="10" maxlength="9" name="nif"
+                        pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))"
+                        title="Introduzca el dni" required />
+                </div>
+
+            </div>
+
+            <!--Fila 3-->
+            <div class="clearfix">
+                <!--Celda 1 de la fila 3-->
+                <div style="float:left;width: 80px;">
+                    Apellidos
+                </div>
+                <!--Celda 2 de la fila 3-->
+                <div style="float:left;">
+                    <input type="text" name="apellidos" size="20" />
+                </div>
+
+            </div>
+
+            <!--Fila 4-->
+            <div class="clearfix">
+
+                <!--Celda 1 de la fila 4-->
+                <div style="float:left;width: 80px;">
+                    Password
+                </div>
+                <!--Celda 2 de la fila 4-->
+                <div style="float:left;">
+                    <input type="password" name="password" />
+                </div>
+
+            </div>
+
+            <!--Fila -->
+            <div class="clearfix">
+                <div style="float:left;">
+                    <label for="varon">Varón</label>
+                    <input type="radio" name="genero" id="varon " value="varon">
+                </div>
+
+                <div style="float:left;">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="genero" id="mujer " value="mujer">
+                </div>
+
+                <div style="float:left;">
+                    <label for="otro">Otro</label>
+                    <input type="radio" name="genero" id="otro " value="otro">
+                </div>
+            </div>
+
+
+            <div class="clearfix">
+                <div style="float:left;">
+                    Fichero
+                </div>
+
+                <div style="float:left;">
+                    <input type="file" name="fich" id="fich">
+                </div>
+
+            </div>
+
+
+
+
+            <!--Fila -->
+            <div class="clearfix">
+                <div style="float:left;">
+                    <label for="varon">Varón</label>
+                    <input type="checkbox" name="varon" id="varon " value="varon">
+                </div>
+            
+                <div style="float:left;">
+                    <label for="mujer">Mujer</label>
+                    <input type="checkbox" name="mujer" id="mujer " value="mujer">
+                </div>
+            
+                <div style="float:left;">
+                    <label for="otro">Otro</label>
+                    <input type="checkbox" name="otro" id="otro " value="otro">
+                </div>
+            </div>
+
+            <div class="clearfix">
+
+                <div style="float: left;">
+                    Variable oculta
+                </div>
+
+                <div style="float: left;">
+                    <input type="hidden" name="parametrooculto" value="valor oculto"/>
+                </div>
+
+            </div>
+
+            <!--Fila -->
+            <div class="clearfix">
+                <!--Celda 1 de la fila -->
+                <div style="float:left;width: 80px;">
+                    <!--Este input es un botón para limpiar los campos del formulario-->
+                    <input type="reset" value="Limpiar" />
+                </div>
+                <!--Celda 2 de la fila -->
+                <div style="float:right;">
+                    <!-- Este es un input para enviar el formulario al action (url) establecido-->
+                    <input type="submit" value="Enviar" />
+                </div>
+            </div>
+
+        </div>
+
+
+    </form>
+
+    <div></div>
+
+
+</body>
+
+</html>
